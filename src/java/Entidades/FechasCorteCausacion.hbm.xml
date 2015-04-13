@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/12/2009 04:59:48 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.FechasCorteCausacion" table="FECHAS_CORTE_CAUSACION">
+    <comment>tipo de causacion 1 para nomina y 0 para ps</comment>
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="fechaCorte" type="timestamp">
+      <column length="19" name="FECHA_CORTE" not-null="true"/>
+    </property>
+    <property name="tipoCausacion" type="short">
+      <column name="TIPO_CAUSACION" not-null="true"/>
+    </property>
+    <property name="mesCausado" type="int">
+      <column name="MES_CAUSADO" not-null="true"/>
+    </property>
+    <property name="yearCausado" type="int">
+      <column name="YEAR_CAUSADO" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

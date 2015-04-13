@@ -1,0 +1,169 @@
+10
+
+dir
+0
+https://atsys.svn.cvsdude.com/ATSYS_WEB_SERVICES/ATSYS-WEB-SERVICES/src/java/DAOs
+https://atsys.svn.cvsdude.com/ATSYS_WEB_SERVICES
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+60b0d526-70f6-4de9-8a15-bb3ffdf92276
+
+
+
+
+
+
+
+empty
+
+UsuarioSistemaDao.java
+file
+
+
+
+add
+
+ValorFormaPagoDao.java
+file
+
+
+
+add
+
+Formato.java
+file
+
+
+
+add
+
+FacturaDao.java
+file
+
+
+
+add
+
+CuentasCobroDao.java
+file
+
+
+
+add
+
+ContratoDao.java
+file
+
+
+
+add
+
+RecursoHumanoDao.java
+file
+
+
+
+add
+
+RolDao.java
+file
+
+
+
+add
+
+CajaMenorDao.java
+file
+
+
+
+add
+
+LiquidacionDao.java
+file
+
+
+
+add
+
+CentroCostoDao.java
+file
+
+
+
+add
+
+CausacionDao.java
+file
+
+
+
+add
+
+PersonaDao.java
+file
+
+
+
+add
+
+CausacionNominaDao.java
+file
+
+
+
+add
+
+CausacionPsDao.java
+file
+
+
+
+add
+
+OficioDao.java
+file
+
+
+
+add
+
+RolExampleDao.java
+file
+
+
+
+add
+
+MovimientosDao.java
+file
+
+
+
+add
+
+FichaDao.java
+file
+
+
+
+add
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/09/2009 03:44:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.RolPermisos" table="ROL_PERMISOS">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="Entidades.Rol" fetch="select" name="rol">
+      <column name="ID_ROL" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Permisos" fetch="select" name="permisos">
+      <column name="ID_PERMISO" not-null="true"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

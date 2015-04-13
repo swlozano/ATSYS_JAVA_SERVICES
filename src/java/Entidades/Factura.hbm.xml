@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/10/2009 12:36:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.Factura" table="FACTURA">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one class="Entidades.Persona" fetch="select" name="persona">
+            <column name="ID_PERSONA" not-null="true"/>
+        </many-to-one>
+        <property name="fechaFacturacion" type="timestamp">
+            <column length="19" name="FECHA_FACTURACION" not-null="true"/>
+        </property>
+        <property name="fechaPactadaPago" type="timestamp">
+            <column length="19" name="FECHA_PACTADA_PAGO" not-null="false"/>
+        </property>
+        <property name="subtutal" type="double">
+            <column name="SUBTUTAL" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="saldo" type="double">
+            <column name="SALDO" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="numeroFactura" type="string">
+            <column length="1000" name="NUMERO_FACTURA" not-null="true"/>
+        </property>
+        <property name="estadoFactura" type="string">
+            <column name="ESTADO_FACTURA" length="50" not-null="true" />
+        </property>
+        <set inverse="true" name="detalleFacturas">
+            <key>
+                <column name="ID" not-null="true" unique="true"/>
+            </key>
+            <one-to-many class="Entidades.DetalleFactura"/>
+        </set>
+        <set inverse="true" name="abonos">
+            <key>
+                <column name="ID_FACTURA" not-null="true"/>
+            </key>
+            <one-to-many class="Entidades.Abono"/>
+        </set>
+        <set inverse="true" name="facturaIvas">
+            <key>
+                <column name="ID_FACTURA" not-null="true"/>
+            </key>
+            <one-to-many class="Entidades.FacturaIva"/>
+        </set>
+    </class>
+</hibernate-mapping>

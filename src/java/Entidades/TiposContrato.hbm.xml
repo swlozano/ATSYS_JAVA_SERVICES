@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4/11/2009 10:54:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.TiposContrato" table="TIPOS_CONTRATO">
+    <id name="id" type="short">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="tipoContrato" type="string">
+      <column length="50" name="TIPO_CONTRATO" not-null="true"/>
+    </property>
+    <set inverse="true" name="contratos">
+      <key>
+        <column name="ID_TIPO_CONTRATO" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.Contrato"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22/10/2009 12:59:29 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.DetalleFactura" table="DETALLE_FACTURA">
+        <comment>-subtotal = (catidad*valorProducto) sin retencion -total = (c/u de los valores de la tabla factura_Retencion - subtotal)</comment>
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one class="Entidades.Factura" fetch="select" name="factura">
+            <column name="ID_FACTURA" not-null="true"/>
+        </many-to-one>
+        <property name="descripcionBienServicio" type="string">
+            <column length="1000" name="DESCRIPCION_BIEN_SERVICIO" not-null="true"/>
+        </property>
+        <property name="cantidad" type="short">
+            <column name="CANTIDAD" not-null="true"/>
+        </property>
+        <property name="precio" type="double">
+            <column name="PRECIO" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="subtotal" type="double">
+            <column name="SUBTOTAL" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" precision="15" scale="15" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

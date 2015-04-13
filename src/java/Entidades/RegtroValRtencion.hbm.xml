@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/11/2009 09:49:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.RegtroValRtencion" table="REGTRO_VAL_RTENCION">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="idCauscionPs" type="int">
+      <column name="ID_CAUSCION_PS" not-null="true"/>
+    </property>
+    <property name="valorRetencion" type="double">
+      <column name="VALOR_RETENCION" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="idRetncionPago" type="int">
+      <column name="ID_RETNCION_PAGO" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

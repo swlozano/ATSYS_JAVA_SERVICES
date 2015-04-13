@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8/02/2010 03:03:27 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.CausacionNomina" table="CAUSACION_NOMINA">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="idContrato" type="int">
+            <column name="ID_CONTRATO" not-null="true" />
+        </property>
+        <property name="idFechaCorte" type="int">
+            <column name="ID_FECHA_CORTE" not-null="true" />
+        </property>
+        <property name="idTributaria" type="int">
+            <column name="ID_TRIBUTARIA" not-null="true" />
+        </property>
+        <property name="salario" type="double">
+            <column name="SALARIO" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="ibc" type="double">
+            <column name="IBC" precision="7" scale="7" not-null="true" />
+        </property>
+        <property name="diasTrabajados" type="short">
+            <column name="DIAS_TRABAJADOS" not-null="true" />
+        </property>
+        <property name="subtotal" type="double">
+            <column name="SUBTOTAL" precision="7" scale="7" not-null="true" />
+        </property>
+        <property name="auxilioTransporte" type="double">
+            <column name="AUXILIO_TRANSPORTE" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="descuentoSalud" type="double">
+            <column name="DESCUENTO_SALUD" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="descuentoPension" type="double">
+            <column name="DESCUENTO_PENSION" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="totalOtrasDeducciones" type="double">
+            <column name="TOTAL_OTRAS_DEDUCCIONES" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="totalOtrosMas" type="double">
+            <column name="TOTAL_OTROS_MAS" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="totalAPagar" type="double">
+            <column name="TOTAL_A_PAGAR" precision="7" scale="7" not-null="true" />
+        </property>
+        <property name="totalCausEmpresa" type="double">
+            <column name="TOTAL_CAUS_EMPRESA" precision="7" scale="7" not-null="true" />
+        </property>
+        <property name="vacaciones" type="double">
+            <column name="VACACIONES" precision="7" scale="7" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

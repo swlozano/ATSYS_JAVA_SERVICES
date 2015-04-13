@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/09/2009 03:44:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Soporte" table="SOPORTE">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="Entidades.Movimientos" fetch="select" name="movimientos">
+      <column name="ID_MOVIMIENTO"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

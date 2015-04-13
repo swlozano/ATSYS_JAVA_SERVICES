@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 28/12/2009 11:30:24 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Liquidacion" table="LIQUIDACION">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="idContrato" type="int">
+      <column name="ID_CONTRATO" not-null="true"/>
+    </property>
+    <property name="idCuentaBancaria" type="int">
+      <column name="ID_CUENTA_BANCARIA" not-null="true"/>
+    </property>
+    <property name="idFormulaPs" type="int">
+      <column name="ID_FORMULA_PS" not-null="true"/>
+    </property>
+    <property name="idFormulaVacaciones" type="int">
+      <column name="ID_FORMULA_VACACIONES" not-null="true"/>
+    </property>
+    <property name="idFormulaCesantias" type="int">
+      <column name="ID_FORMULA_CESANTIAS" not-null="true"/>
+    </property>
+    <property name="idFormuInteresCesan" type="int">
+      <column name="ID_FORMU_INTERES_CESAN" not-null="true"/>
+    </property>
+    <property name="diasTrabajados" type="int">
+      <column name="DIAS_TRABAJADOS" not-null="true"/>
+    </property>
+    <property name="primaServicios" type="double">
+      <column name="PRIMA_SERVICIOS" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="vacaciones" type="double">
+      <column name="VACACIONES" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="cesantias" type="double">
+      <column name="CESANTIAS" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="interesesCesantias" type="double">
+      <column name="INTERESES_CESANTIAS" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="totalLiquidacion" type="double">
+      <column name="TOTAL_LIQUIDACION" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="fechaLiquidacion" type="timestamp">
+      <column length="19" name="FECHA_LIQUIDACION" not-null="true"/>
+    </property>
+    <property name="fechaPago" type="timestamp">
+      <column length="19" name="FECHA_PAGO"/>
+    </property>
+    <property name="sueldoBasico" type="double">
+      <column name="SUELDO_BASICO" not-null="true" precision="7" scale="7"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" 
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+    <destination id="AgrupacionFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.AgrupacionFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="ConfiguracionFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.ConfiguracionFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="LogFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.LogFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="RolPermisoFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.RolPermisoFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="UsuarioFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.UsuarioFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="VendedorFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.VendedorFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="DocumentosFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.DocumentosFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="FormaPagoFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.FormaPagoFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="ReporteFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.ReporteFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="SapFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.SapFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="AvancesFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.AvancesFacade</source>
+        </properties>
+    </destination>
+
+    <destination id="LineaFacade">
+        <properties>
+            <source>org.seratic.enterprise.web.rocsa.fachada.LineaFacade</source>
+        </properties>
+    </destination>
+
+</service>

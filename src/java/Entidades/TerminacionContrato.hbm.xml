@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/11/2009 11:20:24 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.TerminacionContrato" table="TERMINACION_CONTRATO">
+    <comment>Solicitabte 0 para empleado 1 para empresa</comment>
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="idContrato" type="int">
+      <column name="ID_CONTRATO" not-null="true"/>
+    </property>
+    <property name="solicitante" type="short">
+      <column name="SOLICITANTE" not-null="true"/>
+    </property>
+    <property name="motivo" type="string">
+      <column length="250" name="MOTIVO" not-null="true"/>
+    </property>
+    <property name="cartaRenuncia" type="short">
+      <column name="CARTA_RENUNCIA" not-null="true"/>
+    </property>
+    <property name="cartaAceptacion" type="short">
+      <column name="CARTA_ACEPTACION" not-null="true"/>
+    </property>
+    <property name="cartaTerminacion" type="short">
+      <column name="CARTA_TERMINACION" not-null="true"/>
+    </property>
+    <property name="fechaPropuestaRetiro" type="timestamp">
+      <column length="19" name="FECHA_PROPUESTA_RETIRO" not-null="false"/>
+    </property>
+    <property name="fechaRetiro" type="timestamp">
+      <column length="19" name="FECHA_RETIRO" not-null="false"/>
+    </property>
+    <property name="respuesta" type="short">
+      <column name="RESPUESTA" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/02/2010 04:06:04 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.CausacionPs" table="CAUSACION_PS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="idContrato" type="int">
+            <column name="ID_CONTRATO" not-null="true" />
+        </property>
+        <property name="idFechaCorte" type="int">
+            <column name="ID_FECHA_CORTE" not-null="true" />
+        </property>
+        <property name="basico" type="double">
+            <column name="BASICO" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="diasTrabajados" type="short">
+            <column name="DIAS_TRABAJADOS" not-null="true" />
+        </property>
+        <property name="totalDevengados" type="double">
+            <column name="TOTAL_DEVENGADOS" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="totalOtrosMas" type="double">
+            <column name="TOTAL_OTROS_MAS" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="totalRetenciones" type="double">
+            <column name="TOTAL_RETENCIONES" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="totalDeducciones" type="double">
+            <column name="TOTAL_DEDUCCIONES" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="totalAPagar" type="double">
+            <column name="TOTAL_A_PAGAR" precision="15" scale="15" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

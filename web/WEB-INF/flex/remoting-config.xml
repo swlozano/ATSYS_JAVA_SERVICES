@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service"
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+
+    <destination id="usuarioSistema">
+        <properties>
+            <source>DAOs.UsuarioSistemaDao</source>
+        </properties>
+    </destination>
+
+    <destination id="rolDao">
+        <properties>
+            <source>DAOs.RolDao</source>
+        </properties>
+    </destination>
+
+    <destination id="cajaMenorDao">
+        <properties>
+            <source>DAOs.CajaMenorDao</source>
+        </properties>
+    </destination>
+
+    <destination id="centroCostoDao">
+        <properties>
+            <source>DAOs.CentroCostoDao</source>
+        </properties>
+    </destination>
+
+    <destination id="personaDao">
+        <properties>
+            <source>DAOs.PersonaDao</source>
+        </properties>
+    </destination>
+
+    <destination id="movimientoDao">
+        <properties>
+            <source>DAOs.MovimientosDao</source>
+        </properties>
+    </destination>
+
+    <destination id="facturaDao">
+        <properties>
+            <source>DAOs.FacturaDao</source>
+        </properties>
+    </destination>
+
+    <destination id="recursoHumanoDao">
+        <properties>
+            <source>DAOs.RecursoHumanoDao</source>
+        </properties>
+    </destination>
+
+    <destination id="oficioDao">
+        <properties>
+            <source>DAOs.OficioDao</source>
+        </properties>
+    </destination>
+
+    <destination id="contratoDao">
+        <properties>
+            <source>DAOs.ContratoDao</source>
+        </properties>
+    </destination>
+
+    <destination id="causacionNominaDao">
+        <properties>
+            <source>DAOs.CausacionNominaDao</source>
+        </properties>
+    </destination>
+
+    <destination id="valorFormaPagoDao">
+        <properties>
+            <source>DAOs.ValorFormaPagoDao</source>
+        </properties>
+    </destination>
+
+    <destination id="fichaDao">
+        <properties>
+            <source>DAOs.FichaDao</source>
+        </properties>
+    </destination>
+
+    <destination id="fechas">
+        <properties>
+            <source>Utilidades.Fechas</source>
+        </properties>
+    </destination>
+
+    <destination id="cuentasCobroDao">
+        <properties>
+            <source>DAOs.CuentasCobroDao</source>
+        </properties>
+    </destination>
+    <destination id="causacionDao">
+        <properties>
+            <source>DAOs.CausacionDao</source>
+        </properties>
+    </destination>
+    <destination id="liquidacionDao">
+        <properties>
+            <source>DAOs.LiquidacionDao</source>
+        </properties>
+    </destination>
+
+    <destination id="causacionPsDao">
+        <properties>
+            <source>DAOs.CausacionPsDao</source>
+        </properties>
+    </destination>
+
+    <destination id="cuentaPorPagarDao">
+        <properties>
+            <source>DAOs.CuentaPorPagarDao</source>
+        </properties>
+    </destination>
+
+     <destination id="reporteFacturaDao">
+        <properties>
+            <source>DAOs.ReporteFacturaDao</source>
+        </properties>
+    </destination>
+
+</service>

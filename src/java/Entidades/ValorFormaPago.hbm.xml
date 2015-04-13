@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4/11/2009 10:54:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.ValorFormaPago" table="VALOR_FORMA_PAGO">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one class="Entidades.Contrato" fetch="select" name="contrato">
+            <column name="ID_CONTRATO" not-null="true"/>
+        </many-to-one>
+
+        <many-to-one class="Entidades.TipoPago" fetch="select" name="tipoPago">
+            <column name="ID_TIPO_PAGO" not-null="true"/>
+        </many-to-one>
+
+        <property name="concepto" type="string">
+            <column length="40" name="CONCEPTO" not-null="true"/>
+        </property>
+
+        <property name="observacion" type="string">
+            <column length="100" name="OBSERVACION" not-null="true"/>
+        </property>
+
+        <property name="periodoPago" type="short">
+            <column name="PERIODO_PAGO" not-null="true"/>
+        </property>
+
+        <property name="fechaInicioPago" type="timestamp">
+            <column length="19" name="FECHA_INICIO_PAGO" not-null="true"/>
+        </property>
+
+        <property name="esFavorito" type="short">
+            <column name="ES_FAVORITO" not-null="true"/>
+        </property>
+
+        <property name="valorPago" type="double">
+            <column name="VALOR_PAGO" not-null="false" precision="7" scale="7"/>
+        </property>
+
+        <property name="totalPago" type="double">
+            <column name="TOTAL_PAGO" not-null="false" precision="7" scale="7"/>
+        </property>
+
+        <property name="esIbc" type="short">
+            <column name="ES_IBC" not-null="false"/>
+        </property>
+
+        <set inverse="true" name="fechasPagos">
+            <key>
+                <column name="ID_VALOR_FORMA_PAGO" not-null="true"/>
+            </key>
+            <one-to-many class="Entidades.FechasPago"/>
+        </set>
+    </class>
+</hibernate-mapping>

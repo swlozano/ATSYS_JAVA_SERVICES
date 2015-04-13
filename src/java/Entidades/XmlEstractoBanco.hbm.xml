@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/09/2009 03:44:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.XmlEstractoBanco" table="XML_ESTRACTO_BANCO">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="fecha" type="timestamp">
+      <column length="19" name="FECHA"/>
+    </property>
+    <property name="descripcion" type="string">
+      <column length="50" name="DESCRIPCION"/>
+    </property>
+    <property name="sucursal" type="string">
+      <column length="50" name="SUCURSAL"/>
+    </property>
+    <property name="dcto" type="java.lang.Double">
+      <column name="DCTO" precision="7" scale="7"/>
+    </property>
+    <property name="valor" type="java.lang.Double">
+      <column name="VALOR" precision="7" scale="7"/>
+    </property>
+    <property name="saldo" type="java.lang.Short">
+      <column name="SALDO"/>
+    </property>
+    <set inverse="true" name="movimientoses">
+      <key>
+        <column name="ID_SOPORTE"/>
+      </key>
+      <one-to-many class="Entidades.Movimientos"/>
+    </set>
+  </class>
+</hibernate-mapping>

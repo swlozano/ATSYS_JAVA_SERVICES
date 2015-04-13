@@ -1,0 +1,274 @@
+10
+
+dir
+0
+https://atsys.svn.cvsdude.com/ATSYS_WEB_SERVICES/ATSYS-WEB-SERVICES/src/java/VO
+https://atsys.svn.cvsdude.com/ATSYS_WEB_SERVICES
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+60b0d526-70f6-4de9-8a15-bb3ffdf92276
+
+
+
+
+
+
+
+empty
+
+RecursoHumanoVO.java
+file
+
+
+
+add
+
+DatoDinamicoVO.java
+file
+
+
+
+add
+
+DatosLiquidacionVO.java
+file
+
+
+
+add
+
+FacturaRetencionVO.java
+file
+
+
+
+add
+
+CajaMenorVO.java
+file
+
+
+
+add
+
+ValorIdVO.java
+file
+
+
+
+add
+
+CentroCostoVO.java
+file
+
+
+
+add
+
+RolPermisosesVO.java
+file
+
+
+
+add
+
+CausacionPsVO.java
+file
+
+
+
+add
+
+NotificacionCajaMenorsVO.java
+file
+
+
+
+add
+
+ReporteMovimientosVO.java
+file
+
+
+
+add
+
+RespuestaVO.java
+file
+
+
+
+add
+
+FacturaIvaVO.java
+file
+
+
+
+add
+
+RetencionVO.java
+file
+
+
+
+add
+
+UsuarioSistemaRolVO.java
+file
+
+
+
+add
+
+Rol_VO.java
+file
+
+
+
+add
+
+DatosCuentaCobroVO.java
+file
+
+
+
+add
+
+CuentaBancariaVO.java
+file
+
+
+
+add
+
+CuentaCobroEstadoVO.java
+file
+
+
+
+add
+
+CausacionVO.java
+file
+
+
+
+add
+
+CausacionNominaVO.java
+file
+
+
+
+add
+
+PersonaVO.java
+file
+
+
+
+add
+
+DetalleFacturaFx.java
+file
+
+
+
+add
+
+ValFormPagoFchasPagVO.java
+file
+
+
+
+add
+
+IngresoEgresoVO.java
+file
+
+
+
+add
+
+UsuarioSistemaVO.java
+file
+
+
+
+add
+
+FechaPagoVO.java
+file
+
+
+
+add
+
+ValorFormaPagoFxVO.java
+file
+
+
+
+add
+
+PermisoVO.java
+file
+
+
+
+add
+
+IvaVO.java
+file
+
+
+
+add
+
+DatosFacturaVO.java
+file
+
+
+
+add
+
+DetalleFacturaVO.java
+file
+
+
+
+add
+
+FacturaVO.java
+file
+
+
+
+add
+
+MovimientoVO.java
+file
+
+
+
+add
+

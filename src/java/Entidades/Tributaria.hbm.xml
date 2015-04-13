@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9/11/2009 07:01:16 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Tributaria" table="TRIBUTARIA">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="ano" type="int">
+      <column name="ANO" not-null="true"/>
+    </property>
+    <property name="fechaResolucion" type="timestamp">
+      <column length="19" name="FECHA_RESOLUCION" not-null="true"/>
+    </property>
+    <property name="smlv" type="double">
+      <column name="SMLV" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="auxilioTrasporte" type="double">
+      <column name="AUXILIO_TRASPORTE" not-null="true" precision="7" scale="7"/>
+    </property>
+    <set inverse="true" name="causacionNominas">
+      <key>
+        <column name="ID_TRIBUTARIA" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.CausacionNomina"/>
+    </set>
+  </class>
+</hibernate-mapping>

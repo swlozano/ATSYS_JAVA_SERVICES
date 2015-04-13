@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/12/2009 05:51:07 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Valores" table="VALORES">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="30" name="NOMBRE" not-null="true"/>
+    </property>
+    <property name="valor" type="double">
+      <column name="VALOR" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="fecha" type="timestamp">
+      <column length="19" name="FECHA" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

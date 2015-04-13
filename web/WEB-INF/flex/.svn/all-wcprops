@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/Rocsa/!svn/ver/496/RocsaMovilServer/web/WEB-INF/flex
+END
+messaging-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/Rocsa/!svn/ver/8/RocsaMovilServer/web/WEB-INF/flex/messaging-config.xml
+END
+proxy-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/Rocsa/!svn/ver/8/RocsaMovilServer/web/WEB-INF/flex/proxy-config.xml
+END
+services-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/Rocsa/!svn/ver/8/RocsaMovilServer/web/WEB-INF/flex/services-config.xml
+END
+remoting-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/Rocsa/!svn/ver/496/RocsaMovilServer/web/WEB-INF/flex/remoting-config.xml
+END

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/10/2009 11:06:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.RecursoHumano" table="RECURSO_HUMANO">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="Entidades.City" fetch="select" name="cityByIdLugarNacimiento">
+      <column name="ID_LUGAR_NACIMIENTO" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.City" fetch="select" name="cityByIdLugarExpedicion">
+      <column name="ID_LUGAR_EXPEDICION" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Arp" fetch="select" name="arp">
+      <column name="ARP"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Afp" fetch="select" name="afp">
+      <column name="AFP"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Eps" fetch="select" name="eps">
+      <column name="EPS"/>
+    </many-to-one>
+    <property name="nombre" type="string">
+      <column length="30" name="NOMBRE" not-null="true"/>
+    </property>
+    <property name="apellido" type="string">
+      <column length="60" name="APELLIDO" not-null="true"/>
+    </property>
+    <property name="cedula" type="int">
+      <column name="CEDULA" not-null="true"/>
+    </property>
+    <property name="correoElectronico" type="string">
+      <column length="100" name="CORREO_ELECTRONICO" not-null="true"/>
+    </property>
+    <property name="telefono" type="string">
+      <column length="20" name="TELEFONO" not-null="true"/>
+    </property>
+    <property name="direccionDomicilio" type="string">
+      <column length="40" name="DIRECCION_DOMICILIO" not-null="true"/>
+    </property>
+    <property name="celular" type="string">
+      <column length="20" name="CELULAR" not-null="true"/>
+    </property>
+    <property name="fechaNacimiento" type="timestamp">
+      <column length="19" name="FECHA_NACIMIENTO" not-null="true"/>
+    </property>
+    <property name="rut" type="string">
+      <column length="30" name="RUT" not-null="true"/>
+    </property>
+    <property name="presentoRut" type="short">
+      <column name="PRESENTO_RUT" not-null="true"/>
+    </property>
+    <property name="presentoCedula" type="short">
+      <column name="PRESENTO_CEDULA" not-null="true"/>
+    </property>
+    <property name="presntoHv" type="short">
+      <column name="PRESNTO_HV" not-null="true"/>
+    </property>
+    <property name="presentoEntrevista" type="short">
+      <column name="PRESENTO_ENTREVISTA" not-null="true"/>
+    </property>
+    <property name="login" type="string">
+      <column length="100" name="LOGIN"/>
+    </property>
+    <property name="contrasena" type="string">
+      <column length="100" name="CONTRASENA"/>
+    </property>
+    <set inverse="true" name="cuentaBancarias">
+      <key>
+        <column name="ID_RECURSO_HUMANO" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.CuentaBancaria"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4/11/2009 10:54:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.TipoPago" table="TIPO_PAGO">
+    <id name="id" type="short">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="30" name="NOMBRE" not-null="true"/>
+    </property>
+    <set inverse="true" name="valorFormaPagos">
+      <key>
+        <column name="ID_TIPO_PAGO" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.ValorFormaPago"/>
+    </set>
+  </class>
+</hibernate-mapping>

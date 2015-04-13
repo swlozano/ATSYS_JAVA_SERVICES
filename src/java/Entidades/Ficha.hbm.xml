@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 25/11/2009 03:10:15 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Ficha" table="FICHA">
+    <comment>TIPO_PRESTAMO 0 PARA PRESTAMOS DE DINEROS TIPO_PRESTAMO 1 PARA PRESTAMOS DE BIENES MATERIALES --------------------------------------------------- ESTADO 0 PARA NO
+        DEVUELTO ESTADO 1 PARA DEVUELTO</comment>
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="idContrato" type="int">
+      <column name="ID_CONTRATO" not-null="true"/>
+    </property>
+    <property name="idTipoFicha" type="short">
+      <column name="ID_TIPO_FICHA" not-null="true"/>
+    </property>
+    <property name="concepto" type="string">
+      <column length="70" name="CONCEPTO" not-null="true"/>
+    </property>
+    <property name="observacion" type="string">
+      <column length="200" name="OBSERVACION" not-null="true"/>
+    </property>
+    <property name="valorPrestamo" type="java.lang.Double">
+      <column name="VALOR_PRESTAMO" precision="7" scale="7"/>
+    </property>
+    <property name="fechaDelPago" type="timestamp">
+      <column length="19" name="FECHA_DEL_PAGO"/>
+    </property>
+    <property name="texto" type="string">
+      <column length="300" name="TEXTO"/>
+    </property>
+    <property name="fechaInicio" type="timestamp">
+      <column length="19" name="FECHA_INICIO"/>
+    </property>
+    <property name="fechaFin" type="timestamp">
+      <column length="19" name="FECHA_FIN"/>
+    </property>
+    <property name="estado" type="java.lang.Short">
+      <column name="ESTADO"/>
+    </property>
+    <property name="tipoPrestamo" type="java.lang.Short">
+      <column name="TIPO_PRESTAMO"/>
+    </property>
+    <property name="llamadoAtencion" type="java.lang.Short">
+      <column name="LLAMADO_ATENCION"/>
+    </property>
+    <property name="buenComportamiento" type="java.lang.Short">
+      <column name="BUEN_COMPORTAMIENTO"/>
+    </property>
+  </class>
+</hibernate-mapping>

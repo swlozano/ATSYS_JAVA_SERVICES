@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4/11/2009 10:54:36 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Contrato" table="CONTRATO">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="Entidades.OficioDesempenar" fetch="select" name="oficioDesempenar">
+      <column name="ID_OFICIO_DESEMPENAR" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.TiposContrato" fetch="select" name="tiposContrato">
+      <column name="ID_TIPO_CONTRATO" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Country" fetch="select" name="countryByIdNacionLabores">
+      <column length="3" name="ID_NACION_LABORES" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.RecursoHumano" fetch="select" name="recursoHumano">
+      <column name="ID_RECURSO_HUMANO" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Country" fetch="select" name="countryByIdNacionContrato">
+      <column length="3" name="ID_NACION_CONTRATO" not-null="true"/>
+    </many-to-one>
+    <property name="fechaInicio" type="timestamp">
+      <column length="19" name="FECHA_INICIO" not-null="true"/>
+    </property>
+    <property name="fechaFin" type="timestamp">
+      <column length="19" name="FECHA_FIN" not-null="false"/>
+    </property>
+    <property name="estado" type="short">
+      <column name="ESTADO" not-null="true"/>
+    </property>
+    <property name="fechaRealTerminacion" type="timestamp">
+      <column length="19" name="FECHA_REAL_TERMINACION" not-null="false"/>
+    </property>
+    <property name="tiempo" type="double">
+      <column name="TIEMPO" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="pagosCancelados" type="short">
+      <column name="PAGOS_CANCELADOS" not-null="true"/>
+    </property>
+    <set inverse="true" name="valorFormaPagos">
+      <key>
+        <column name="ID_CONTRATO" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.ValorFormaPago"/>
+    </set>
+  </class>
+</hibernate-mapping>

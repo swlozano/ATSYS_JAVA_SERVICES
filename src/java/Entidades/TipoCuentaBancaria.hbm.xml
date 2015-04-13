@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/10/2009 11:06:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.TipoCuentaBancaria" table="TIPO_CUENTA_BANCARIA">
+    <id name="id" type="short">
+      <column name="ID"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="50" name="NOMBRE" not-null="true"/>
+    </property>
+    <set inverse="true" name="cuentaBancarias">
+      <key>
+        <column name="ID_TIP_CUENTA_BAN" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.CuentaBancaria"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/09/2009 03:44:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.NotificacionCajaMenor" table="NOTIFICACION_CAJA_MENOR">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="Entidades.UsuarioSys" fetch="select" name="usuarioSys">
+      <column name="ID_USUARIO_SYS" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.CajaMenor" fetch="select" name="cajaMenor">
+      <column name="ID_CAJA_MENOR" not-null="true"/>
+    </many-to-one>
+    <property name="esResponsable" type="short">
+      <column name="ES_RESPONSABLE" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

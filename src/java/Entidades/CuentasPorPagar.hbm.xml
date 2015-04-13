@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-jul-2011 0:45:25 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.CuentasPorPagar" table="CUENTAS_POR_PAGAR">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="fechaOrigen" type="timestamp">
+            <column name="FECHA_ORIGEN" length="19" not-null="true" />
+        </property>
+        <property name="idRecursoHumano" type="java.lang.Integer">
+            <column name="ID_RECURSO_HUMANO" />
+        </property>
+        <property name="idPersona" type="java.lang.Integer">
+            <column name="ID_PERSONA" />
+        </property>
+        <property name="concepto" type="string">
+            <column name="CONCEPTO" length="500" />
+        </property>
+        <property name="idBanco" type="java.lang.Integer">
+            <column name="ID_BANCO" />
+        </property>
+        <property name="idTipoCuentaBanco" type="java.lang.Integer">
+            <column name="ID_TIPO_CUENTA_BANCO" />
+        </property>
+        <property name="numeroCuenta" type="string">
+            <column name="NUMERO_CUENTA" length="40" />
+        </property>
+        <property name="valor" type="java.lang.Double">
+            <column name="VALOR" precision="7" scale="7" />
+        </property>
+        <property name="idEstadoCuentaXPagar" type="short">
+            <column name="ID_ESTADO_CUENTA_X_PAGAR" not-null="true" />
+        </property>
+        <property name="idGeneradorCuentaPago" type="short">
+            <column name="ID_GENERADOR_CUENTA_PAGO" not-null="true" />
+        </property>
+        <property name="idCampo" type="java.lang.Integer">
+            <column name="ID_CAMPO" />
+        </property>
+        <property name="fechaPago" type="timestamp">
+            <column name="FECHA_PAGO" length="19" />
+        </property>
+        <property name="idCuentaBancaria" type="java.lang.Integer">
+            <column name="ID_CUENTA_BANCARIA" />
+        </property>
+    </class>
+</hibernate-mapping>

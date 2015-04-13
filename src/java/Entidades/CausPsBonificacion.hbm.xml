@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/11/2009 09:41:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.CausPsBonificacion" table="CAUS_PS_BONIFICACION">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="idBonificacion" type="int">
+      <column name="ID_BONIFICACION" not-null="true"/>
+    </property>
+    <property name="idCausacionPs" type="int">
+      <column name="ID_CAUSACION_PS" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

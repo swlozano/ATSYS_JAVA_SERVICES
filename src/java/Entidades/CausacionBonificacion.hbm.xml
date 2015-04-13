@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9/11/2009 07:01:16 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.CausacionBonificacion" table="CAUSACION_BONIFICACION">
+    <id name="id" type="short">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="Entidades.CausacionNomina" fetch="select" name="causacionNomina">
+      <column name="ID_CAUSACION" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Bonificacion" fetch="select" name="bonificacion">
+      <column name="ID_BONIFICACION" not-null="true"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

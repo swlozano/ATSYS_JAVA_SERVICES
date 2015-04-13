@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/10/2009 11:06:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Arp" table="ARP">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="100" name="NOMBRE"/>
+    </property>
+    <property name="esEmpresa" type="short">
+      <column name="ES_EMPRESA" not-null="true"/>
+    </property>
+    <set inverse="true" name="recursoHumanos">
+      <key>
+        <column name="ARP"/>
+      </key>
+      <one-to-many class="Entidades.RecursoHumano"/>
+    </set>
+  </class>
+</hibernate-mapping>

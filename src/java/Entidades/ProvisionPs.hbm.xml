@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16/02/2010 03:14:23 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.ProvisionPs" table="PROVISION_PS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="100" not-null="true" />
+        </property>
+        <property name="valor" type="double">
+            <column name="VALOR" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="observacion" type="string">
+            <column name="OBSERVACION" length="300" not-null="true" />
+        </property>
+        <property name="idCausacionPs" type="int">
+            <column name="ID_CAUSACION_PS" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

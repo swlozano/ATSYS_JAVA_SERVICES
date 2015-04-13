@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/09/2009 03:44:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.UsuarioSys" table="USUARIO_SYS">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="nombre" type="string">
+      <column length="20" name="NOMBRE" not-null="true"/>
+    </property>
+    <property name="apellido" type="string">
+      <column length="40" name="APELLIDO" not-null="true"/>
+    </property>
+    <property name="cedula" type="int">
+      <column name="CEDULA" not-null="true"/>
+    </property>
+    <property name="login" type="string">
+      <column length="20" name="LOGIN" not-null="true"/>
+    </property>
+    <property name="contrasena" type="string">
+      <column length="20" name="CONTRASENA" not-null="true"/>
+    </property>
+    <property name="correoElectronico" type="string">
+      <column length="100" name="CORREO_ELECTRONICO" not-null="true"/>
+    </property>
+    <property name="isAdmin" type="short">
+      <column name="IS_ADMIN" not-null="true"/>
+    </property>
+    <set inverse="true" name="notificacionCajaMenors">
+      <key>
+        <column name="ID_USUARIO_SYS" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.NotificacionCajaMenor"/>
+    </set>
+    <set inverse="true" name="usuarioSistemaRols">
+      <key>
+        <column name="ID_USUARIO_SISTEMA" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.UsuarioSistemaRol"/>
+    </set>
+  </class>
+</hibernate-mapping>

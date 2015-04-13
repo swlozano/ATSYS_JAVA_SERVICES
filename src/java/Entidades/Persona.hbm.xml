@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/09/2009 03:44:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.Persona" table="PERSONA">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="increment"/>
+        </id>
+        <property name="nit" type="big_decimal">
+            <column name="NIT" precision="0"/>
+        </property>
+        <property name="cedula" type="java.lang.Integer">
+            <column name="CEDULA"/>
+        </property>
+        <property name="telefono" type="java.lang.Integer">
+            <column name="TELEFONO"/>
+        </property>
+        <property name="nombreRs" type="string">
+            <column length="100" name="NOMBRE_RS" not-null="true"/>
+        </property>
+        <property name="cual" type="string">
+            <column name="CUAL" length="100" />
+        </property>
+        <property name="numeroCual" type="string">
+            <column name="NUMERO_CUAL" length="100" />
+        </property>
+        <set inverse="true" name="movimientoses">
+            <key>
+                <column name="ID_PERSONA" not-null="true"/>
+            </key>
+            <one-to-many class="Entidades.Movimientos"/>
+        </set>
+        <property name="esEmpresa" type="short">
+            <column name="ES_EMPRESA" not-null="true"/>
+        </property>
+        <property name="esUsuario" type="short">
+            <column name="ES_USUARIO" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

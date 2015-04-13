@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/12/2009 11:55:28 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.CuentaDeCobro" table="CUENTA_DE_COBRO">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <property name="idContrato" type="int">
+      <column name="ID_CONTRATO" not-null="true"/>
+    </property>
+    <property name="idCuentaBancaria" type="int">
+      <column name="ID_CUENTA_BANCARIA" not-null="true"/>
+    </property>
+    <property name="idFechaPago" type="int">
+      <column name="ID_FECHA_PAGO" not-null="true"/>
+    </property>
+    <property name="fechaSolicitud" type="timestamp">
+      <column length="19" name="FECHA_SOLICITUD" not-null="true"/>
+    </property>
+    <property name="concepto" type="string">
+      <column length="300" name="CONCEPTO" not-null="true"/>
+    </property>
+    <property name="observacion" type="string">
+      <column length="300" name="OBSERVACION" not-null="true"/>
+    </property>
+    <property name="valor" type="double">
+      <column name="VALOR" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="idUltimoEstado" type="short">
+      <column name="ID_ULTIMO_ESTADO" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

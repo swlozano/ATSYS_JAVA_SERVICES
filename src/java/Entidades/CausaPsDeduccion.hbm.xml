@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 30/12/2009 03:33:54 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.CausaPsDeduccion" table="CAUSA_PS_DEDUCCION">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="idCausacionPs" type="int">
+            <column name="ID_CAUSACION_PS" not-null="true" />
+        </property>
+        <property name="idDeducion" type="int">
+            <column name="ID_DEDUCION" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

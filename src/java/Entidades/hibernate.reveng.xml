@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+    <schema-selection/>
+    <table-filter match-name="CAJA_MENOR"/>
+    <table-filter match-name="CENTRO_DE_COSTO"/>
+    <table-filter match-name="MOVIMIENTOS"/>
+    <table-filter match-name="NOTIFICACION_CAJA_MENOR"/>
+    <table-filter match-name="PERMISOS"/>
+    <table-filter match-name="PERSONA"/>
+    <table-filter match-name="ROL"/>
+    <table-filter match-name="ROL_PERMISOS"/>
+    <table-filter match-name="SOPORTE"/>
+    <table-filter match-name="TIPO_MOVIMIENTO"/>
+    <table-filter match-name="USUARIO_SISTEMA_ROL"/>
+    <table-filter match-name="USUARIO_SYS"/>
+    <table-filter match-name="XML_ESTRACTO_BANCO"/>
+    <table-filter match-name="IVA"/>
+    <table-filter match-name="RETENCIONES"/>
+    <table-filter match-name="FACTURA_IVA"/>
+    <table-filter match-name="FACTURA_RETENCION"/>
+    <table-filter match-name="DETALLE_FACTURA"/>
+    <table-filter match-name="ABONO"/>
+    <table-filter match-name="FACTURA"/>
+    <table-filter match-name="OFICIO_DESEMPENAR"/>
+
+  <!-- recurso humano -->
+
+    <table-filter match-name="TIPO_CUENTA_BANCARIA"/>
+    <table-filter match-name="BANCO"/>
+    <table-filter match-name="EPS"/>
+    <table-filter match-name="ARP"/>
+    <table-filter match-name="CITY"/>
+    <table-filter match-name="COUNTRY"/>
+    <table-filter match-name="AFP"/>
+    <table-filter match-name="CUENTA_BANCARIA"/>
+    <table-filter match-name="RECURSO_HUMANO"/>
+
+  <!-- CONTRATACION -->
+
+    <table-filter match-name="TIPOS_CONTRATO"/>
+    <table-filter match-name="CONTRATO"/>
+    <table-filter match-name="TIPO_PAGO"/>
+    <table-filter match-name="COUNTRY"/>
+    <table-filter match-name="EPS"/>
+    <table-filter match-name="VALOR_FORMA_PAGO"/>
+    <table-filter match-name="CITY"/>
+    <table-filter match-name="OFICIO_DESEMPENAR"/>
+    <table-filter match-name="FECHAS_PAGO"/>
+    <table-filter match-name="ARP"/>
+    <table-filter match-name="RECURSO_HUMANO"/>
+    <table-filter match-name="AFP"/>
+
+    <table-filter match-name="RETENCION_PAGOS"/>
+    <table-filter match-name="VFP_RET_PAGOS"/>
+
+    <table-filter match-name="ADENDO"/>
+
+<!-- CAUSACION POR NOMINA -->
+
+    <table-filter match-name="BONIFICACION"/>
+    <table-filter match-name="VALORES_ASOCAJA"/>
+    <table-filter match-name="CAUSACION_NOMINA"/>
+    <table-filter match-name="CAUSACION_EMPRESA"/>
+    <table-filter match-name="CAUSA_NOMINA_PROVISION"/>
+    <table-filter match-name="PROVISIONES"/>
+    <table-filter match-name="DEDUCCIONES"/>
+    <table-filter match-name="CAUSACION_BONIFICACION"/>
+    <table-filter match-name="CAUSACION_DEDUCCION_NOMINA"/>
+    <table-filter match-name="TRIBUTARIA"/>
+    
+    <table-filter match-name="FECHAS_CORTE_CAUSACION"/>
+    <table-filter match-name="TIPO_ASOCAJA"/>
+
+    <!--CAUSACION PS-->
+    <table-filter match-name="CAUSACION_PS"/>
+    <table-filter match-name="CAUS_PS_BONIFICACION"/>
+    <table-filter match-name="CAUSA_PROVISION_PS"/>
+    <table-filter match-name="CAUSA_PS_DEDUCCION"/>
+    <table-filter match-name="REGTRO_VAL_RTENCION"/>
+
+    <table-filter match-name="TERMINACION_CONTRATO"/>
+
+    <table-filter match-name="TIPO_FICHA"/>
+    <table-filter match-name="FICHA"/>
+    <table-filter match-name="LIQUIDACION"/>
+    <table-filter match-name="FORMULA"/>
+    <table-filter match-name="TIPO_FORMULA"/>
+    <table-filter match-name="TABLA_ATRIBUTO"/>
+    <table-filter match-name="TABLAS"/>
+    <table-filter match-name="VALORES"/>
+
+    <table-filter match-name="CUENTA_DE_COBRO"/>
+    <table-filter match-name="CUENTA_COBRO_ESTADO"/>
+    <table-filter match-name="ESTADO"/>
+    <table-filter match-name="CUENTAS_POR_PAGAR"/>
+    
+    <table-filter match-name="ESTADO_CUENTA_X_PAGAR"/>
+    <table-filter match-name="TIPO_GEN_CUENTA_PAGO"/>
+    <table-filter match-name="PROVISION_PS"/>
+    <table-filter match-name="OTROS_MAS_PS"/>
+    <table-filter match-name="OTRO_MAS_NOMINA"/>
+    
+</hibernate-reverse-engineering>

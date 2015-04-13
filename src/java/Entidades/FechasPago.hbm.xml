@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9/02/2010 07:38:24 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.FechasPago" table="FECHAS_PAGO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <many-to-one name="valorFormaPago" class="Entidades.ValorFormaPago" fetch="select">
+            <column name="ID_VALOR_FORMA_PAGO" not-null="true" />
+        </many-to-one>
+        <property name="idTipoContrato" type="short">
+            <column name="ID_TIPO_CONTRATO" not-null="true" />
+        </property>
+        <property name="iniPeriodoPago" type="timestamp">
+            <column name="INI_PERIODO_PAGO" length="19" not-null="true" />
+        </property>
+        <property name="finPeriodoPago" type="timestamp">
+            <column name="FIN_PERIODO_PAGO" length="19" not-null="true" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="FECHA" length="19" not-null="true" />
+        </property>
+        <property name="pagada" type="short">
+            <column name="PAGADA" not-null="true" />
+        </property>
+        <property name="activa" type="short">
+            <column name="ACTIVA" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

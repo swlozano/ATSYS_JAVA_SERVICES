@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/10/2009 11:06:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.City" table="CITY">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="Entidades.Country" fetch="select" name="country">
+      <column length="3" name="COUNTRYCODE" not-null="true"/>
+    </many-to-one>
+    <property name="name" type="string">
+      <column length="35" name="NAME" not-null="true"/>
+    </property>
+    <property name="district" type="string">
+      <column length="20" name="DISTRICT" not-null="true"/>
+    </property>
+    <property name="population" type="int">
+      <column name="POPULATION" not-null="true"/>
+    </property>
+    <set inverse="true" name="recursoHumanosForIdLugarExpedicion">
+      <key>
+        <column name="ID_LUGAR_EXPEDICION" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.RecursoHumano"/>
+    </set>
+    <set inverse="true" name="recursoHumanosForIdLugarNacimiento">
+      <key>
+        <column name="ID_LUGAR_NACIMIENTO" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.RecursoHumano"/>
+    </set>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2/09/2009 03:44:13 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Movimientos" table="MOVIMIENTOS">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="Entidades.TipoMovimiento" fetch="select" name="tipoMovimiento">
+      <column name="ID_TIPO_MOVIMIENTO" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Persona" fetch="select" name="persona">
+      <column name="ID_PERSONA" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.CajaMenor" fetch="select" name="cajaMenor">
+      <column name="ID_CAJA_MENOR"/>
+    </many-to-one>
+    <many-to-one class="Entidades.CentroDeCosto" fetch="select" name="centroDeCosto">
+      <column name="ID_CENTROCOSTO" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.XmlEstractoBanco" fetch="select" name="xmlEstractoBanco">
+      <column name="ID_SOPORTE"/>
+    </many-to-one>
+    <property name="valor" type="double">
+      <column name="VALOR" not-null="true" precision="7" scale="7"/>
+    </property>
+    <property name="fechaMovimiento" type="timestamp">
+      <column length="19" name="FECHA_MOVIMIENTO" not-null="true"/>
+    </property>
+    <property name="idUsuario" type="int">
+      <column name="ID_USUARIO" not-null="true"/>
+    </property>
+    <property name="concepto" type="string">
+      <column length="100" name="CONCEPTO"/>
+    </property>
+    <property name="isApertura" type="short">
+      <column name="IS_APERTURA" not-null="true"/>
+    </property>
+    <set inverse="true" name="soportes">
+      <key>
+        <column name="ID_MOVIMIENTO"/>
+      </key>
+      <one-to-many class="Entidades.Soporte"/>
+    </set>
+  </class>
+</hibernate-mapping>

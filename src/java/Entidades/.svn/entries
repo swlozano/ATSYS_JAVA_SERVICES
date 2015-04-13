@@ -1,0 +1,925 @@
+10
+
+dir
+0
+https://atsys.svn.cvsdude.com/ATSYS_WEB_SERVICES/ATSYS-WEB-SERVICES/src/java/Entidades
+https://atsys.svn.cvsdude.com/ATSYS_WEB_SERVICES
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+60b0d526-70f6-4de9-8a15-bb3ffdf92276
+
+
+
+
+
+
+
+empty
+
+CuentaDeCobro.hbm.xml
+file
+
+
+
+add
+
+TipoFormula.java
+file
+
+
+
+add
+
+CausaPsDeduccion.hbm.xml
+file
+
+
+
+add
+
+Estado.hbm.xml
+file
+
+
+
+add
+
+hibernate.reveng.xml
+file
+
+
+
+add
+
+Tributaria.java
+file
+
+
+
+add
+
+Afp.java
+file
+
+
+
+add
+
+TipoAsocaja.hbm.xml
+file
+
+
+
+add
+
+Arp.java
+file
+
+
+
+add
+
+TipoMovimiento.java
+file
+
+
+
+add
+
+FacturaIva.java
+file
+
+
+
+add
+
+Deducciones.java
+file
+
+
+
+add
+
+UsuarioSys.java
+file
+
+
+
+add
+
+Formula.hbm.xml
+file
+
+
+
+add
+
+RegtroValRtencion.hbm.xml
+file
+
+
+
+add
+
+RolPermisos.hbm.xml
+file
+
+
+
+add
+
+CuentaCobroEstado.java
+file
+
+
+
+add
+
+Tablas.java
+file
+
+
+
+add
+
+Persona.java
+file
+
+
+
+add
+
+Factura.hbm.xml
+file
+
+
+
+add
+
+CentroDeCosto.java
+file
+
+
+
+add
+
+Eps.hbm.xml
+file
+
+
+
+add
+
+Contrato.hbm.xml
+file
+
+
+
+add
+
+UsuarioSistemaRol.hbm.xml
+file
+
+
+
+add
+
+ValorFormaPago.java
+file
+
+
+
+add
+
+Provisiones.java
+file
+
+
+
+add
+
+FechasPago.hbm.xml
+file
+
+
+
+add
+
+CuentaBancaria.hbm.xml
+file
+
+
+
+add
+
+NotificacionCajaMenor.java
+file
+
+
+
+add
+
+CausacionDeduccionNomina.java
+file
+
+
+
+add
+
+CausPsBonificacion.hbm.xml
+file
+
+
+
+add
+
+CuentaCobroEstado.hbm.xml
+file
+
+
+
+add
+
+Contrato.java
+file
+
+
+
+add
+
+Adendo.java
+file
+
+
+
+add
+
+RecursoHumano.java
+file
+
+
+
+add
+
+Soporte.java
+file
+
+
+
+add
+
+FacturaRetencion.java
+file
+
+
+
+add
+
+City.hbm.xml
+file
+
+
+
+add
+
+Rol.java
+file
+
+
+
+add
+
+CausacionBonificacion.hbm.xml
+file
+
+
+
+add
+
+CausacionBonificacion.java
+file
+
+
+
+add
+
+RolPermisos.java
+file
+
+
+
+add
+
+FacturaRetencion.hbm.xml
+file
+
+
+
+add
+
+Rol.hbm.xml
+file
+
+
+
+add
+
+VfpRetPagos.hbm.xml
+file
+
+
+
+add
+
+Country.hbm.xml
+file
+
+
+
+add
+
+Persona.hbm.xml
+file
+
+
+
+add
+
+Movimientos.hbm.xml
+file
+
+
+
+add
+
+Retenciones.hbm.xml
+file
+
+
+
+add
+
+ValorFormaPago.hbm.xml
+file
+
+
+
+add
+
+TipoMovimiento.hbm.xml
+file
+
+
+
+add
+
+Arp.hbm.xml
+file
+
+
+
+add
+
+Bonificacion.hbm.xml
+file
+
+
+
+add
+
+CausaNominaProvision.java
+file
+
+
+
+add
+
+Movimientos.java
+file
+
+
+
+add
+
+Ficha.java
+file
+
+
+
+add
+
+OficioDesempenar.java
+file
+
+
+
+add
+
+TablaAtributo.hbm.xml
+file
+
+
+
+add
+
+ValoresAsocaja.hbm.xml
+file
+
+
+
+add
+
+Abono.hbm.xml
+file
+
+
+
+add
+
+TipoPago.java
+file
+
+
+
+add
+
+TiposContrato.hbm.xml
+file
+
+
+
+add
+
+TipoCuentaBancaria.java
+file
+
+
+
+add
+
+XmlEstractoBanco.hbm.xml
+file
+
+
+
+add
+
+Valores.hbm.xml
+file
+
+
+
+add
+
+OficioDesempenar.hbm.xml
+file
+
+
+
+add
+
+RetencionPagos.hbm.xml
+file
+
+
+
+add
+
+DetalleFactura.hbm.xml
+file
+
+
+
+add
+
+FacturaIva.hbm.xml
+file
+
+
+
+add
+
+Deducciones.hbm.xml
+file
+
+
+
+add
+
+FechasCorteCausacion.java
+file
+
+
+
+add
+
+CuentaDeCobro.java
+file
+
+
+
+add
+
+CausaPsDeduccion.java
+file
+
+
+
+add
+
+Retenciones.java
+file
+
+
+
+add
+
+Adendo.hbm.xml
+file
+
+
+
+add
+
+RecursoHumano.hbm.xml
+file
+
+
+
+add
+
+TipoCuentaBancaria.hbm.xml
+file
+
+
+
+add
+
+Banco.java
+file
+
+
+
+add
+
+TerminacionContrato.java
+file
+
+
+
+add
+
+Permisos.hbm.xml
+file
+
+
+
+add
+
+TipoFicha.hbm.xml
+file
+
+
+
+add
+
+CausaNominaProvision.hbm.xml
+file
+
+
+
+add
+
+TipoAsocaja.java
+file
+
+
+
+add
+
+Abono.java
+file
+
+
+
+add
+
+FechasPago.java
+file
+
+
+
+add
+
+CuentaBancaria.java
+file
+
+
+
+add
+
+FechasCorteCausacion.hbm.xml
+file
+
+
+
+add
+
+Permisos.java
+file
+
+
+
+add
+
+Country.java
+file
+
+
+
+add
+
+Formula.java
+file
+
+
+
+add
+
+City.java
+file
+
+
+
+add
+
+NotificacionCajaMenor.hbm.xml
+file
+
+
+
+add
+
+CausacionDeduccionNomina.hbm.xml
+file
+
+
+
+add
+
+Iva.java
+file
+
+
+
+add
+
+Bonificacion.java
+file
+
+
+
+add
+
+Factura.java
+file
+
+
+
+add
+
+Liquidacion.hbm.xml
+file
+
+
+
+add
+
+Ficha.hbm.xml
+file
+
+
+
+add
+
+CajaMenor.java
+file
+
+
+
+add
+
+VfpRetPagos.java
+file
+
+
+
+add
+
+Liquidacion.java
+file
+
+
+
+add
+
+Provisiones.hbm.xml
+file
+
+
+
+add
+
+TipoPago.hbm.xml
+file
+
+
+
+add
+
+TipoFicha.java
+file
+
+
+
+add
+
+Valores.java
+file
+
+
+
+add
+
+Estado.java
+file
+
+
+
+add
+
+Tributaria.hbm.xml
+file
+
+
+
+add
+
+Afp.hbm.xml
+file
+
+
+
+add
+
+UsuarioSistemaRol.java
+file
+
+
+
+add
+
+CentroDeCosto.hbm.xml
+file
+
+
+
+add
+
+CausPsBonificacion.java
+file
+
+
+
+add
+
+Iva.hbm.xml
+file
+
+
+
+add
+
+Banco.hbm.xml
+file
+
+
+
+add
+
+TerminacionContrato.hbm.xml
+file
+
+
+
+add
+
+RegtroValRtencion.java
+file
+
+
+
+add
+
+XmlEstractoBanco.java
+file
+
+
+
+add
+
+TiposContrato.java
+file
+
+
+
+add
+
+UsuarioSys.hbm.xml
+file
+
+
+
+add
+
+Soporte.hbm.xml
+file
+
+
+
+add
+
+RetencionPagos.java
+file
+
+
+
+add
+
+DetalleFactura.java
+file
+
+
+
+add
+
+CajaMenor.hbm.xml
+file
+
+
+
+add
+
+TipoFormula.hbm.xml
+file
+
+
+
+add
+
+Eps.java
+file
+
+
+
+add
+
+Tablas.hbm.xml
+file
+
+
+
+add
+
+TablaAtributo.java
+file
+
+
+
+add
+
+ValoresAsocaja.java
+file
+
+
+
+add
+

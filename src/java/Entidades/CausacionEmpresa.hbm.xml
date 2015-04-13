@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 8/02/2010 03:33:06 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.CausacionEmpresa" table="CAUSACION_EMPRESA">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="diasCotizados" type="int">
+            <column name="DIAS_COTIZADOS" not-null="true" />
+        </property>
+        <property name="salud" type="double">
+            <column name="SALUD" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="pension" type="double">
+            <column name="PENSION" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="ibcRiesgos" type="double">
+            <column name="IBC_RIESGOS" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="riesgos" type="double">
+            <column name="RIESGOS" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="cesantias" type="double">
+            <column name="CESANTIAS" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="interesesCesantias" type="double">
+            <column name="INTERESES_CESANTIAS" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="ccf" type="double">
+            <column name="CCF" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="sena" type="double">
+            <column name="SENA" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="icbf" type="double">
+            <column name="ICBF" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="prima" type="double">
+            <column name="PRIMA" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="vacaciones" type="double">
+            <column name="VACACIONES" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="otro1" type="double">
+            <column name="OTRO1" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="otro2" type="double">
+            <column name="OTRO2" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" precision="15" scale="15" not-null="true" />
+        </property>
+        <property name="idCausacionNomina" type="int">
+            <column name="ID_CAUSACION_NOMINA" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

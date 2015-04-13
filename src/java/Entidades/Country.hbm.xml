@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26/10/2009 11:06:55 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.Country" table="COUNTRY">
+    <id name="code" type="string">
+      <column length="3" name="CODE"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column length="52" name="NAME"/>
+    </property>
+    <property name="continent" type="string">
+      <column length="20" name="CONTINENT"/>
+    </property>
+    <property name="region" type="string">
+      <column length="26" name="REGION"/>
+    </property>
+    <property name="capital" type="java.lang.Integer">
+      <column name="CAPITAL"/>
+    </property>
+    <property name="code2" type="string">
+      <column length="2" name="CODE2"/>
+    </property>
+    <set inverse="true" name="cities">
+      <key>
+        <column length="3" name="COUNTRYCODE" not-null="true"/>
+      </key>
+      <one-to-many class="Entidades.City"/>
+    </set>
+  </class>
+</hibernate-mapping>

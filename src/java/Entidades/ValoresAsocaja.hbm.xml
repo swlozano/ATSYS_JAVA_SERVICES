@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 9/11/2009 07:01:16 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entidades.ValoresAsocaja" table="VALORES_ASOCAJA">
+        <id name="id" type="int">
+            <column name="ID"/>
+            <generator class="increment"/>
+        </id>
+        <many-to-one class="Entidades.TipoAsocaja" fetch="select" name="tipoAsocaja">
+            <column name="ID_TIPO_ASOCAJA" not-null="true"/>
+        </many-to-one>
+        <property name="porcentajeEmpresa" type="string">
+            <column name="PORCENTAJE_EMPRESA" length="20" not-null="true" />
+        </property>
+        <property name="porcentajeEmpleado" type="string">
+            <column name="PORCENTAJE_EMPLEADO" length="20" not-null="true" />
+        </property>
+        <property name="ano" type="int">
+            <column name="ANO" not-null="true"/>
+        </property>
+        <property name="aplicaA" type="string">
+            <column length="30" name="APLICA_A" not-null="true"/>
+        </property>
+        <set inverse="true" name="causacionEmpresas">
+            <key>
+                <column name="ID_VALORES_ASOCAJA" not-null="true"/>
+            </key>
+            <one-to-many class="Entidades.CausacionEmpresa"/>
+        </set>
+    </class>
+</hibernate-mapping>

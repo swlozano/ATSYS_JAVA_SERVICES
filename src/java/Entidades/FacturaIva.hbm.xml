@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22/10/2009 12:43:06 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="Entidades.FacturaIva" table="FACTURA_IVA">
+    <id name="id" type="int">
+      <column name="ID"/>
+      <generator class="increment"/>
+    </id>
+    <many-to-one class="Entidades.Factura" fetch="select" name="factura">
+      <column name="ID_FACTURA" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="Entidades.Iva" fetch="select" name="iva">
+      <column name="ID_IVA" not-null="true"/>
+    </many-to-one>
+    <property name="valor" type="double">
+      <column name="VALOR" precision="15" scale="15" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>
